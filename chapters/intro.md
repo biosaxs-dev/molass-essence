@@ -8,13 +8,13 @@ You can read the chapters of the left sidebar in order. Otherwise, glance over t
 
 As you proceed, you may also find the following resources helpful:
 
-* [Molass Library Tutorial](https://molass-saxs.github.io/molass-tutorial/) on practical usage, for beginners
-* [Molass Technical Report](https://freesemt.github.io/molass-technical/) on techincal details, for advanced users
-* [Molass Library Reference](https://molass-saxs.github.io/molass-library/) on function reference, for coding
-* [Molass Library Repository](https://github.com/molass-saxs/molass-library) on source code, for implementation
+* [Molass Library Tutorial](https://biosaxs-dev.github.io/molass-tutorial/) on practical usage, for beginners
+* [Molass Technical Report](https://biosaxs-dev.github.io/molass-technical/) on techincal details, for advanced users
+* [Molass Library Reference](https://biosaxs-dev.github.io/molass-library/) on function reference, for coding
+* [Molass Library Repository](https://github.com/biosaxs-dev/molass-library) on source code, for implementation
 
 To join the community, see also:
-* [Molass Developer's Handbook](https://molass-saxs.github.io/molass-develop) for maintenance, for developers.
+* [Molass Developer's Handbook](https://biosaxs-dev.github.io/molass-develop) for maintenance, for developers.
 
 ## Acknowledgements
 
