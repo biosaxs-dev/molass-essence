@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -236,7 +236,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -440,15 +445,15 @@ document.write(`
 <p>For simplicity, let <span class="math notranslate nohighlight">\(k = 2\)</span> and consider the following truncdated SVD.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">molass.SAXS.Models.Simple</span> <span class="kn">import</span> <span class="n">guinier_porod</span>
-<span class="kn">from</span> <span class="nn">molass.SEC.Models.Simple</span> <span class="kn">import</span> <span class="n">gaussian</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Models.Simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">guinier_porod</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SEC.Models.Simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">gaussian</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
 <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">plot_multiple_component_data</span><span class="p">(</span><span class="n">scattering_params</span><span class="p">,</span> <span class="n">elution_params</span><span class="p">,</span> <span class="n">use_matrices</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_multiple_component_data</span><span class="p">(</span><span class="n">scattering_params</span><span class="p">,</span> <span class="n">elution_params</span><span class="p">,</span> <span class="n">use_matrices</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
     <span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">131</span><span class="p">)</span>
     <span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">132</span><span class="p">)</span>
@@ -526,7 +531,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/7719d5a649d7fb842ffc37597ec9cff098b156d02cce4f475a9c8508206e4db2.png" src="../../_images/7719d5a649d7fb842ffc37597ec9cff098b156d02cce4f475a9c8508206e4db2.png" />
+<img alt="../../_images/06226bce2f977a2ec57d37d04923d6b8f31fabab5d2b6705d238d9a63b0aada8.png" src="../../_images/06226bce2f977a2ec57d37d04923d6b8f31fabab5d2b6705d238d9a63b0aada8.png" />
 </div>
 </div>
 </section>
@@ -546,14 +551,14 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(400, 300) (400, 300) 1.4726135793099132e-14 [26.15172839  0.41368576] [5.11387606 0.64318408]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(400, 300) (400, 300) 1.569660885325227e-14 [26.15172839  0.41368576] [5.11387606 0.64318408]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_any_lrf</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_any_lrf</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">positive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">view</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">A_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">scales</span><span class="p">)</span> <span class="o">@</span> <span class="n">A</span>
     <span class="n">P</span> <span class="o">=</span> <span class="n">U_</span> <span class="o">@</span> <span class="n">A_</span>
     <span class="k">if</span> <span class="n">positive</span><span class="p">:</span>
@@ -598,15 +603,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.46077616 0.29433177]
- [0.71045974 0.48858089]] [[ 1.00000000e+00  8.82297349e-16]
- [-3.06990648e-16  1.00000000e+00]]
-[[ 2.61517284e+01 -9.76493368e-16]
- [ 4.22358027e-15  4.13685757e-01]] [26.15172839  0.41368576]
-5.359192819405167e-14
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.50218174 0.76761819]
+ [0.52551303 0.75720728]] [[ 1.00000000e+00  1.10604072e-15]
+ [-5.45834669e-16  1.00000000e+00]]
+[[ 2.61517284e+01 -4.97974583e-15]
+ [-6.32837210e-15  4.13685757e-01]] [26.15172839  0.41368576]
+6.597822205646611e-14
 </pre></div>
 </div>
-<img alt="../../_images/ceb5d1c09720b6f5c88ac3120ac3c2b728829855d2b193a51958503c90789965.png" src="../../_images/ceb5d1c09720b6f5c88ac3120ac3c2b728829855d2b193a51958503c90789965.png" />
+<img alt="../../_images/3a918d0dd9ad5ea855542bcd2ac7bf2233e71e09a2faed0a2d08f4acb3b79488.png" src="../../_images/3a918d0dd9ad5ea855542bcd2ac7bf2233e71e09a2faed0a2d08f4acb3b79488.png" />
 </div>
 </div>
 </section>

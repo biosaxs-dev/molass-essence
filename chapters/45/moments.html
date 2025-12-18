@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -234,7 +234,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -434,8 +439,8 @@ document.write(`
 <h3>Uniformly weighted Average<a class="headerlink" href="#uniformly-weighted-average" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">N</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
@@ -450,7 +455,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/64785597502ba869fc77cd1c3572e1f4468519908e7d3c65b4e4c92982d81b9f.png" src="../../_images/64785597502ba869fc77cd1c3572e1f4468519908e7d3c65b4e4c92982d81b9f.png" />
+<img alt="../../_images/c3d20c27c23d801799b0d7e71f454f6df18bbfcbbacf0d2f05d740d0dbb82a27.png" src="../../_images/c3d20c27c23d801799b0d7e71f454f6df18bbfcbbacf0d2f05d740d0dbb82a27.png" />
 </div>
 </div>
 </section>
@@ -485,7 +490,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/191813d9bf812a9d503c905a9bfb2962e568165351edde8f8e406fb237b92379.png" src="../../_images/191813d9bf812a9d503c905a9bfb2962e568165351edde8f8e406fb237b92379.png" />
+<img alt="../../_images/49a2f6899cb7616dbb8eade289f9c7b66aecae007d05325c79d7ef5a6e7d3617.png" src="../../_images/49a2f6899cb7616dbb8eade289f9c7b66aecae007d05325c79d7ef5a6e7d3617.png" />
 </div>
 </div>
 </section>
@@ -502,7 +507,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.772080571028074
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(1.772080571028074)
 </pre></div>
 </div>
 </div>
@@ -518,7 +523,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.199132225263884
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.float64(2.199132225263884)
 </pre></div>
 </div>
 </div>
@@ -534,7 +539,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0.49785237938665794, 0.7055865498906976)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(np.float64(0.49785237938665794), np.float64(0.7055865498906976))
 </pre></div>
 </div>
 </div>

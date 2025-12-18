@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -234,7 +234,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -406,10 +411,10 @@ document.write(`
 <p>Its asymmetry parameter is <code class="docutils literal notranslate"><span class="pre">tau</span></code> and it reduces to the Gaussian when <code class="docutils literal notranslate"><span class="pre">tau</span></code> = 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="k">def</span> <span class="nf">plot_egh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">molass.SEC.Models.Simple</span> <span class="kn">import</span> <span class="n">egh</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_egh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">mu</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">tau</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">molass.SEC.Models.Simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">egh</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">egh</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
 
     <span class="n">w</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -439,13 +444,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/403817b603746a2eb5ce1ec56bdea12d0d74eaad4965a50ea79b0350b4636ebc.png" src="../../_images/403817b603746a2eb5ce1ec56bdea12d0d74eaad4965a50ea79b0350b4636ebc.png" />
+<img alt="../../_images/0a5da2a098d1001e8d73556b40c973eae93b62adc4711386c9544eb23edf6ad2.png" src="../../_images/0a5da2a098d1001e8d73556b40c973eae93b62adc4711386c9544eb23edf6ad2.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_egh_curves</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">molass.SEC.Models.Simple</span> <span class="kn">import</span> <span class="n">egh</span><span class="p">,</span> <span class="n">egh_std</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_egh_curves</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">molass.SEC.Models.Simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">egh</span><span class="p">,</span> <span class="n">egh_std</span>
     <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">param</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
         <span class="n">A</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
         <span class="n">mu</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="s1">&#39;mu&#39;</span><span class="p">]</span>
@@ -489,7 +494,7 @@ document.write(`
 egh_std= 34.80891242918417
 </pre></div>
 </div>
-<img alt="../../_images/051ed25bb725127c13a858cf5692e42e0c28395284f2a8ea95668bf59550710a.png" src="../../_images/051ed25bb725127c13a858cf5692e42e0c28395284f2a8ea95668bf59550710a.png" />
+<img alt="../../_images/e290700da411a64ef5d7a0f4320dbf2327c1cc9b78ca54f21abdc2fa4a9e22f3.png" src="../../_images/e290700da411a64ef5d7a0f4320dbf2327c1cc9b78ca54f21abdc2fa4a9e22f3.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -506,7 +511,7 @@ egh_std= 34.80891242918417
 egh_std= 34.80891242918417
 </pre></div>
 </div>
-<img alt="../../_images/1f085a1c304c1e2cc6a66c2ed6f3c83bd44ad33d3cf5b3df98aec0f2f70663e6.png" src="../../_images/1f085a1c304c1e2cc6a66c2ed6f3c83bd44ad33d3cf5b3df98aec0f2f70663e6.png" />
+<img alt="../../_images/f04b0de1e3a2acfe4e9972e1ac527cb1251db7ee870ca3941a9dbbebe4011f14.png" src="../../_images/f04b0de1e3a2acfe4e9972e1ac527cb1251db7ee870ca3941a9dbbebe4011f14.png" />
 </div>
 </div>
 </section>

@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -234,7 +234,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -404,11 +409,11 @@ document.write(`
 <h1><span class="section-number">6.5. </span>Linearly Worsened Errors<a class="headerlink" href="#linearly-worsened-errors" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_version</span>
 <span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.5.0&#39;</span><span class="p">,</span> <span class="s2">&quot;This tutorial requires molass version 0.5.0 or higher.&quot;</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">molass.SAXS.Models.Formfactors</span> <span class="kn">import</span> <span class="n">homogeneous_sphere</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Models.Formfactors</span><span class="w"> </span><span class="kn">import</span> <span class="n">homogeneous_sphere</span>
 
 <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">Rg</span> <span class="o">=</span> <span class="mi">35</span>
@@ -422,15 +427,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x159a611e4e0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x17a7fe1a710&gt;]
 </pre></div>
 </div>
-<img alt="../../_images/7490afe939599aab56eb94a63edb65f0938c37a5fc74eeab251f6eec067470a3.png" src="../../_images/7490afe939599aab56eb94a63edb65f0938c37a5fc74eeab251f6eec067470a3.png" />
+<img alt="../../_images/aea425d0e062ae53430be5b7ec319b941d73a95c6f8e0f689163df5a2f5404d2.png" src="../../_images/aea425d0e062ae53430be5b7ec319b941d73a95c6f8e0f689163df5a2f5404d2.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.SAXS.Theory.DjKinning1984</span> <span class="kn">import</span> <span class="n">S0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Theory.DjKinning1984</span><span class="w"> </span><span class="kn">import</span> <span class="n">S0</span>
 <span class="n">I1</span> <span class="o">=</span> <span class="n">homogeneous_sphere</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
 <span class="n">I2</span> <span class="o">=</span> <span class="n">I1</span> <span class="o">*</span> <span class="n">S0</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
 
@@ -443,21 +448,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x159a84f4d40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x17a7fe89550&gt;
 </pre></div>
 </div>
-<img alt="../../_images/cb2146b339fc3f014be84a1d0a85d76a2fc1360bb427410bfebf8cf36131f627.png" src="../../_images/cb2146b339fc3f014be84a1d0a85d76a2fc1360bb427410bfebf8cf36131f627.png" />
+<img alt="../../_images/c8c00239a2ed064567c1959d14a0697a6574713f78a4edb41eb0c6d90696c47a.png" src="../../_images/c8c00239a2ed064567c1959d14a0697a6574713f78a4edb41eb0c6d90696c47a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">bisect</span> <span class="kn">import</span> <span class="n">bisect_right</span>
-<span class="kn">from</span> <span class="nn">molass.SEC.Models.Simple</span> <span class="kn">import</span> <span class="n">gaussian</span>
-<span class="kn">from</span> <span class="nn">molass.LowRank.LowRankInfo</span> <span class="kn">import</span> <span class="n">get_denoised_data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bisect</span><span class="w"> </span><span class="kn">import</span> <span class="n">bisect_right</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SEC.Models.Simple</span><span class="w"> </span><span class="kn">import</span> <span class="n">gaussian</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.LowRank.LowRankInfo</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_denoised_data</span>
 
-<span class="k">def</span> <span class="nf">plot_structure_factor</span><span class="p">(</span><span class="n">Rg</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">error_level</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_structure_factor</span><span class="p">(</span><span class="n">Rg</span><span class="o">=</span><span class="mi">35</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">error_level</span><span class="o">=</span><span class="mf">0.05</span><span class="p">):</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
     <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
 
@@ -524,7 +529,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/b13fdb23fc8a755a3333012463848b2ace8e4bc55f3066a5871a0a5bedf36423.png" src="../../_images/b13fdb23fc8a755a3333012463848b2ace8e4bc55f3066a5871a0a5bedf36423.png" />
+<img alt="../../_images/17f560c186e6c177b8c7a94095fbb43c3b9006e137ca7a77561505481c5b96ad.png" src="../../_images/17f560c186e6c177b8c7a94095fbb43c3b9006e137ca7a77561505481c5b96ad.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -534,7 +539,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1253f2c32fa6806b8aca7c6dafdb50b99c68169bd29e45808317e8cc4b21a88d.png" src="../../_images/1253f2c32fa6806b8aca7c6dafdb50b99c68169bd29e45808317e8cc4b21a88d.png" />
+<img alt="../../_images/3dff82d9146944e05a78958c532a9c1515907f0a6a20f45d84adb30597f915b8.png" src="../../_images/3dff82d9146944e05a78958c532a9c1515907f0a6a20f45d84adb30597f915b8.png" />
 </div>
 </div>
 </section>

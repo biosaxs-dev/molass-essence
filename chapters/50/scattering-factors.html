@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -236,7 +236,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -486,13 +491,13 @@ document.write(`
 <h3>Homogeneous Sphere<a class="headerlink" href="#homogeneous-sphere" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_version</span>
 <span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.5.0&#39;</span><span class="p">,</span> <span class="s2">&quot;This tutorial requires molass version 0.5.0 or higher.&quot;</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">molass.Shapes</span> <span class="kn">import</span> <span class="n">Sphere</span>
-<span class="kn">from</span> <span class="nn">molass.DensitySpace</span> <span class="kn">import</span> <span class="n">VoxelSpace</span>
-<span class="kn">from</span> <span class="nn">molass.SAXS.Models.Formfactors</span> <span class="kn">import</span> <span class="n">homogeneous_sphere</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.Shapes</span><span class="w"> </span><span class="kn">import</span> <span class="n">Sphere</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.DensitySpace</span><span class="w"> </span><span class="kn">import</span> <span class="n">VoxelSpace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Models.Formfactors</span><span class="w"> </span><span class="kn">import</span> <span class="n">homogeneous_sphere</span>
 
 <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mi">30</span>
@@ -521,7 +526,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;q (1/Å)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/2c3d2442d7ee5cfe2bb4b45168dbc2c9091bf8579204e4e840fccdecce9ff1de.png" src="../../_images/2c3d2442d7ee5cfe2bb4b45168dbc2c9091bf8579204e4e840fccdecce9ff1de.png" />
+<img alt="../../_images/2724abafbba69e09fccd86a10ab352b6e91f7bebc1c9f158a3c8747bc824e57c.png" src="../../_images/2724abafbba69e09fccd86a10ab352b6e91f7bebc1c9f158a3c8747bc824e57c.png" />
 </div>
 </div>
 </section>
@@ -529,9 +534,9 @@ document.write(`
 <h3>Tri-axial Ellipsoid<a class="headerlink" href="#tri-axial-ellipsoid" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.Shapes</span> <span class="kn">import</span> <span class="n">Ellipsoid</span>
-<span class="kn">from</span> <span class="nn">molass.DensitySpace</span> <span class="kn">import</span> <span class="n">VoxelSpace</span>
-<span class="kn">from</span> <span class="nn">molass.SAXS.Models.Formfactors</span> <span class="kn">import</span> <span class="n">tri_axial_ellipsoid</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass.Shapes</span><span class="w"> </span><span class="kn">import</span> <span class="n">Ellipsoid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.DensitySpace</span><span class="w"> </span><span class="kn">import</span> <span class="n">VoxelSpace</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Models.Formfactors</span><span class="w"> </span><span class="kn">import</span> <span class="n">tri_axial_ellipsoid</span>
 <span class="n">I</span> <span class="o">=</span> <span class="n">tri_axial_ellipsoid</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 
 <span class="n">ellipsoid</span> <span class="o">=</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -556,7 +561,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;q (1/Å)&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/2301e1517bf3d6f6288c38d90a0c6cf3b6ea198814ca831821a1f20fa1e85c53.png" src="../../_images/2301e1517bf3d6f6288c38d90a0c6cf3b6ea198814ca831821a1f20fa1e85c53.png" />
+<img alt="../../_images/de8083c7d460020b333cb2392c1f5928c60b1735ba0d8d427ba85e2529b628ed.png" src="../../_images/de8083c7d460020b333cb2392c1f5928c60b1735ba0d8d427ba85e2529b628ed.png" />
 </div>
 </div>
 </section>
@@ -566,15 +571,15 @@ document.write(`
 <p>Following <span id="id3">[<a class="reference internal" href="../90/references.html#id31" title="David J Kinning and Edwin L Thomas. Hard-sphere interactions between spherical domains in diblock copolymers. Macromolecules, 17(9):1712–1718, September 1984.">KT84</a>]</span>, we will give some known examples of structure factor models.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_version</span>
 <span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.5.0&#39;</span><span class="p">,</span> <span class="s2">&quot;This tutorial requires molass version 0.5.0 or higher.&quot;</span>
-<span class="kn">from</span> <span class="nn">molass.SAXS.Theory.DjKinning1984</span> <span class="kn">import</span> <span class="n">demo1</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.SAXS.Theory.DjKinning1984</span><span class="w"> </span><span class="kn">import</span> <span class="n">demo1</span>
 <span class="n">demo1</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/48f429eed16e31558d4d53990eb7c86048968feedb56c17f613a2c0058fee652.png" src="../../_images/48f429eed16e31558d4d53990eb7c86048968feedb56c17f613a2c0058fee652.png" />
+<img alt="../../_images/a66d3fc55293290be7ada71b37e557dc27861a65fd4c6890a45a448b019d23ed.png" src="../../_images/a66d3fc55293290be7ada71b37e557dc27861a65fd4c6890a45a448b019d23ed.png" />
 </div>
 </div>
 </section>

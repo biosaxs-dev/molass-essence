@@ -28,7 +28,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -234,7 +234,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../60/sdm-lkm-equivalence.html">7.4. SDM-LKM Equivalence</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">8. References</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../70/educational.html">8. Educational Supplements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../70/cf-concept.html">8.1. Characteristic Function Concept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../70/gec-monopore-cf.html">8.2. GEC Monopore Characteristic Function</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">9. References</a></li>
 </ul>
 
     </div>
@@ -429,10 +434,10 @@ document.write(`
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_version</span>
 <span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.7.0&#39;</span><span class="p">,</span> <span class="s2">&quot;This tutorial requires molass version 0.7.0 or higher.&quot;</span>
-<span class="kn">from</span> <span class="nn">molass_data</span> <span class="kn">import</span> <span class="n">SAMPLE1</span>
-<span class="kn">from</span> <span class="nn">molass.DataObjects</span> <span class="kn">import</span> <span class="n">SecSaxsData</span> <span class="k">as</span> <span class="n">SSD</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">SAMPLE1</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.DataObjects</span><span class="w"> </span><span class="kn">import</span> <span class="n">SecSaxsData</span> <span class="k">as</span> <span class="n">SSD</span>
 <span class="n">ssd</span> <span class="o">=</span> <span class="n">SSD</span><span class="p">(</span><span class="n">SAMPLE1</span><span class="p">)</span>
 <span class="n">trimmed_ssd</span> <span class="o">=</span> <span class="n">ssd</span><span class="o">.</span><span class="n">trimmed_copy</span><span class="p">()</span>
 <span class="n">corrected_ssd</span> <span class="o">=</span> <span class="n">trimmed_ssd</span><span class="o">.</span><span class="n">corrected_copy</span><span class="p">()</span>
@@ -445,7 +450,7 @@ document.write(`
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>zeros at the angular ends of error data have been replaced with the adjacent values.
 </pre></div>
 </div>
-<img alt="../../_images/6f1ecf8abb029f1bfbf85c4711875c67805c5be40fcd2208b8a64511c0ea03dc.png" src="../../_images/6f1ecf8abb029f1bfbf85c4711875c67805c5be40fcd2208b8a64511c0ea03dc.png" />
+<img alt="../../_images/422694990603b0ddea44308d36199a0e81fa2d8fd371da90e7d654fa94c9fb6e.png" src="../../_images/422694990603b0ddea44308d36199a0e81fa2d8fd371da90e7d654fa94c9fb6e.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -470,7 +475,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.PlotUtils.Comparison</span> <span class="kn">import</span> <span class="n">comparison_plot</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass.PlotUtils.Comparison</span><span class="w"> </span><span class="kn">import</span> <span class="n">comparison_plot</span>
 <span class="n">comparison_plot</span><span class="p">([</span><span class="n">decomposition</span><span class="p">,</span> <span class="n">modified_decomposition</span><span class="p">],</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Comparison of Decompositions&quot;</span><span class="p">,</span> <span class="n">show_proportions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -480,7 +485,7 @@ document.write(`
 Proportions of the second decomposition: [0.31999386 0.20000772 0.47999841]
 </pre></div>
 </div>
-<img alt="../../_images/6267a87ec7e082b3d867ce1e696b5bcf032673ed7c924993d1761a3a2a98151b.png" src="../../_images/6267a87ec7e082b3d867ce1e696b5bcf032673ed7c924993d1761a3a2a98151b.png" />
+<img alt="../../_images/140f339cfc5ee1e7a2f331a206c28ac4d3f092e37486777b47895f5f80843703.png" src="../../_images/140f339cfc5ee1e7a2f331a206c28ac4d3f092e37486777b47895f5f80843703.png" />
 </div>
 </div>
 <p>In this comparison plot, we can compare the propotions easily.</p>
@@ -495,8 +500,8 @@ However, that is not always the case. To illustrate this, let us consider anothe
 <p>For effective observation, we will also prepare the Rg curve.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass_data</span> <span class="kn">import</span> <span class="n">SAMPLE4</span>
-<span class="kn">from</span> <span class="nn">molass.DataObjects</span> <span class="kn">import</span> <span class="n">SecSaxsData</span> <span class="k">as</span> <span class="n">SSD</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">molass_data</span><span class="w"> </span><span class="kn">import</span> <span class="n">SAMPLE4</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">molass.DataObjects</span><span class="w"> </span><span class="kn">import</span> <span class="n">SecSaxsData</span> <span class="k">as</span> <span class="n">SSD</span>
 <span class="n">ssd</span> <span class="o">=</span> <span class="n">SSD</span><span class="p">(</span><span class="n">SAMPLE4</span><span class="p">)</span>
 <span class="n">trimmed_ssd</span> <span class="o">=</span> <span class="n">ssd</span><span class="o">.</span><span class="n">trimmed_copy</span><span class="p">()</span>
 <span class="n">corrected_ssd</span> <span class="o">=</span> <span class="n">trimmed_ssd</span><span class="o">.</span><span class="n">corrected_copy</span><span class="p">()</span>
@@ -505,7 +510,7 @@ However, that is not always the case. To illustrate this, let us consider anothe
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 203/203 [00:04&lt;00:00, 44.23it/s] 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|██████████| 203/203 [00:17&lt;00:00, 11.78it/s]
 </pre></div>
 </div>
 </div>
@@ -515,7 +520,7 @@ However, that is not always the case. To illustrate this, let us consider anothe
 <h3>Varying Proportions into Two Components<a class="headerlink" href="#varying-proportions-into-two-components" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">num_trails</span> <span class="o">=</span> <span class="mi">8</span>
 <span class="n">species1_proportions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">num_trails</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="n">species2_proportions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">num_trails</span><span class="p">)</span>
@@ -544,8 +549,8 @@ However, that is not always the case. To illustrate this, let us consider anothe
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/6d434ed0fb42766889ca639f94db88dd4a9c55f17ce2854c6839ce22256914c0.png" src="../../_images/6d434ed0fb42766889ca639f94db88dd4a9c55f17ce2854c6839ce22256914c0.png" />
-<img alt="../../_images/411b7384e2366bf28ef0ba50a128f248aeaa180d5956936b54db33936b54b2ca.png" src="../../_images/411b7384e2366bf28ef0ba50a128f248aeaa180d5956936b54db33936b54b2ca.png" />
+<img alt="../../_images/b10b534158b240d42029d230026e407dcc9ca076c9253ad65de674eeb03dd327.png" src="../../_images/b10b534158b240d42029d230026e407dcc9ca076c9253ad65de674eeb03dd327.png" />
+<img alt="../../_images/beb5526714fe6b7bb8b8efede7c0b4d50afb5a8d45c8e8a889a1c75f67c06e7e.png" src="../../_images/beb5526714fe6b7bb8b8efede7c0b4d50afb5a8d45c8e8a889a1c75f67c06e7e.png" />
 </div>
 </div>
 </section>
@@ -579,8 +584,8 @@ However, that is not always the case. To illustrate this, let us consider anothe
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a1dcae8ffc0d493369473ecb593bfb440fe9c5012cd0066c9e734523a554c909.png" src="../../_images/a1dcae8ffc0d493369473ecb593bfb440fe9c5012cd0066c9e734523a554c909.png" />
-<img alt="../../_images/943306f1f04c30840757f511fe2c51dcb185cfd110ec429998b02803529141a6.png" src="../../_images/943306f1f04c30840757f511fe2c51dcb185cfd110ec429998b02803529141a6.png" />
+<img alt="../../_images/082c64a0b8c8a90ff9f75c8557b4e36808927ce65ebe450e39337b50aefb1c80.png" src="../../_images/082c64a0b8c8a90ff9f75c8557b4e36808927ce65ebe450e39337b50aefb1c80.png" />
+<img alt="../../_images/4a9c0d445b13f3bdd296141cbd5374202881b00a7c0084bc9a178de30713abc4.png" src="../../_images/4a9c0d445b13f3bdd296141cbd5374202881b00a7c0084bc9a178de30713abc4.png" />
 </div>
 </div>
 </section>
