@@ -91,5 +91,12 @@ chapters:
     title: Kinetic Theory
   - file: chapters/60/sdm-lkm-equivalence
     title: SDM-LKM Equivalence
+- file: chapters/70/educational
+  title: Educational Supplements
+  sections:
+  - file: chapters/70/cf-concept
+    title: Characteristic Function Concept
+  - file: chapters/70/gec-monopore-cf
+    title: GEC Monopore Characteristic Function
 - file: chapters/90/references
   title: References
