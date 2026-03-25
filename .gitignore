@@ -3,3 +3,5 @@ _build/
 
 # Ignore the evironment file which defines PYTHONPATH
 .env
+# VS Code version (auto-updated by vscode-version-recorder extension)
+.github/vscode-version.txt
