@@ -45,6 +45,13 @@ Output goes to `_build/html/`.
 
 ---
 
+## Notebook workflow
+
+See [NOTEBOOK_CONVENTIONS.md v0.1.0](https://github.com/freesemt/ai-context-standard/blob/main/NOTEBOOK_CONVENTIONS.md)  
+Kernel preference: global Python (`py`). Do not create venvs.
+
+---
+
 ## 🔄 Updates
 
 **Latest**: March 25, 2026 — Created `.github/copilot-instructions.md` (AI Context Standard v0.8)
