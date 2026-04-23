@@ -52,6 +52,12 @@ Kernel preference: global Python (`py`). Do not create venvs.
 
 ---
 
+## Response language
+
+**Response language**: English
+
+---
+
 ## 🔄 Updates
 
 **Latest**: March 25, 2026 — Created `.github/copilot-instructions.md` (AI Context Standard v0.8)
