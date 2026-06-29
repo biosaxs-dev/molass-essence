@@ -30,6 +30,8 @@ jobs:
           myst init --yes || true
           
       - name: Build book
+        env:
+          BASE_URL: /molass-essence
         run: myst build --html
       
       - name: Upload artifact
