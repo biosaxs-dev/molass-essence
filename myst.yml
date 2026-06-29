@@ -1,0 +1,10 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Molass Library Essence
+  github: https://github.com/biosaxs-dev/molass-essence
+site:
+  template: book-theme
+  options:
+    favicon: images/molamola.png
+    logo: images/molamola.png
