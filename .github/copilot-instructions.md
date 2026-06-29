@@ -15,8 +15,29 @@ This repository holds the Jupyter Book source for the [Molass Library Essence](h
 ## Repository-specific conventions
 
 - **Format**: [MyST Markdown syntax](https://jupyterbook.org/en/stable/reference/cheatsheet.html) is used throughout unless otherwise stated
-- **Build tool**: Jupyter Book
+- **Build tool**: Jupyter Book v2 (MyST)
 - **Audience**: Users who want to understand the mathematical and physical foundations of SEC-SAXS data analysis
+
+---
+
+## MyST Configuration Notes
+
+**Important**: For detailed MyST troubleshooting (duplicate titles, frontmatter, build issues), see the [Documentation chapter in molass-develop](https://biosaxs-dev.github.io/molass-develop/chapters/07/documentation.html).
+
+**Quick reference**: Notebooks must have frontmatter in the first markdown cell to avoid title duplication:
+
+````markdown
+---
+title: Page Title
+---
+
+# Page Title
+## Section
+...
+````
+
+**Local testing**: `myst start` → http://localhost:3000  
+**Clean rebuild**: `myst clean --all` then `myst start`
 
 ---
 
