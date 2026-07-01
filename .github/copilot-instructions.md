@@ -22,7 +22,14 @@ This repository holds the Jupyter Book source for the [Molass Library Essence](h
 
 ## MyST Configuration Notes
 
-**Important**: For detailed MyST troubleshooting (duplicate titles, frontmatter, build issues), see the [Documentation chapter in molass-develop](https://biosaxs-dev.github.io/molass-develop/chapters/07/documentation.html).
+**Important**: When authoring notebooks for this documentation book, follow the conventions in [molass-develop § Writing Notebooks for Documentation](https://biosaxs-dev.github.io/molass-develop/chapters/07/documentation.html#writing-notebooks-for-documentation). This covers:
+- MyST development workflow and auto-rebuild behavior
+- Suppressing long outputs (%%capture, %%script false, etc.)
+- Notebook frontmatter requirements
+- Common cell magics reference
+- Tool choice for notebook editing
+
+For other MyST troubleshooting (duplicate titles, build issues), see the full [Documentation chapter in molass-develop](https://biosaxs-dev.github.io/molass-develop/chapters/07/documentation.html).
 
 **Quick reference**: Notebooks must have frontmatter in the first markdown cell to avoid title duplication:
 
