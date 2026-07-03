@@ -5,3 +5,9 @@ _build/
 .env
 # VS Code version (auto-updated by vscode-version-recorder extension)
 .github/vscode-version.txt
+
+# Temporary/diagnostic scripts (workspace convention: _*.py)
+_*.py
+
+# Generated status files
+*_status.txt
