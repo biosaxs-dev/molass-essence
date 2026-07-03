@@ -23,7 +23,30 @@ jobs:
       
       - name: Install dependencies
         run: |
-          pip install mystmd
+          pip install mystmd jupyter nbformat
+      
+      - name: Validate notebooks have outputs
+        run: |
+          python3 << 'EOF'
+          import sys, json, pathlib
+          failed = []
+          for nb_path in pathlib.Path('chapters').rglob('*.ipynb'):
+              try:
+                  data = json.loads(nb_path.read_text(encoding='utf-8'))
+                  code_cells = [c for c in data['cells'] if c['cell_type'] == 'code']
+                  if code_cells and not any(c.get('outputs') for c in code_cells):
+                      failed.append(str(nb_path))
+              except Exception as e:
+                  print(f"Error reading {nb_path}: {e}")
+          
+          if failed:
+              print("\n❌ ERROR: Notebooks without outputs (run ./execute_notebooks.ps1 locally):")
+              for f in failed:
+                  print(f"  - {f}")
+              sys.exit(1)
+          else:
+              print("✅ All notebooks have outputs")
+          EOF
       
       - name: Initialize MyST (download templates)
         run: |
