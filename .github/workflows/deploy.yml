@@ -56,7 +56,12 @@ jobs:
         env:
           BASE_URL: /molass-essence
         run: myst build --html
-      
+
+      - name: Redirect old book-root URL (chapters/intro.html, linked from the published JOSS paper)
+        env:
+          BASE_URL: /molass-essence
+        run: python3 scripts/generate_legacy_redirects.py
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
